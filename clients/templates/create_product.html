@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>
+        Create client
+    </h1>
+    
+    {{error}}
+
+    <form action="/clients/create/" method="POST">
+        {% csrf_token %}
+
+        {{form}}
+        
+        <button>
+            Save
+        </button>
+
+    </form>
+{% endblock %}
