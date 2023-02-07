@@ -25,7 +25,7 @@ STATIC_URL = 'static/'
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+DEBUG = 'TRUE'#'RENDER' not in os.environ
 
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
@@ -80,6 +80,14 @@ WSGI_APPLICATION = 'nitroadmin.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': dj_database_url.config(
